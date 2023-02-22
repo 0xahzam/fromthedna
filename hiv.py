@@ -1,4 +1,4 @@
-import utils  # Importing the custom written operations library
+import utils # Importing the custom written operations library
 from dna_features_viewer import GraphicFeature, GraphicRecord
 
 # DNA of HIV-1
@@ -207,7 +207,7 @@ neg_rna_protein_orf_3 = utils.rna_translation(neg_rna_orf_3)
 # Saving proteins into FASTA file
 # Perform Basic Local Alignment using NCBI-BLAST for specific protein details
 # Upload proteins.fasta to https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE=Proteins
-with open('proteins.fasta', 'w') as file:
+with open('sequence-data\proteins.fasta', 'w') as file:
     file.write('>Protein (DNA ORF1 Forward)  \n' + dna_protein_orf_1 + '\n')
     file.write('>Protein (DNA ORF2 Forward) \n' + dna_protein_orf_2 + '\n')
     file.write('>Protein (DNA ORF3 Forward) \n' + dna_protein_orf_3 + '\n')
@@ -233,7 +233,7 @@ record = GraphicRecord(sequence=dna, features=[
 ax, _ = record.plot(figure_width=20)
 record.plot_sequence(ax)
 record.plot_translation(ax, (8, 23), fontdict={'weight': 'bold'})
-ax.figure.savefig('sequence.png', bbox_inches='tight')
+ax.figure.savefig('sequence-data\sequence.png', bbox_inches='tight')
 
 
 # LOGS
