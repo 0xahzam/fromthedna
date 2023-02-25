@@ -204,36 +204,36 @@ neg_rna_protein_orf_2 = utils.rna_translation(neg_rna_orf_2)
 neg_rna_protein_orf_3 = utils.rna_translation(neg_rna_orf_3)
 
 
-# Saving proteins into FASTA file
-# Perform Basic Local Alignment using NCBI-BLAST for specific protein details
-# Upload proteins.fasta to https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE=Proteins
-# with open('sequence-data\proteins.fasta', 'w') as file:
-#     file.write('>Protein (DNA ORF1 Forward)  \n' + dna_protein_orf_1 + '\n')
-#     file.write('>Protein (DNA ORF2 Forward) \n' + dna_protein_orf_2 + '\n')
-#     file.write('>Protein (DNA ORF3 Forward) \n' + dna_protein_orf_3 + '\n')
-#     file.write('\n')
-#     file.write('>Protein (DNA ORF1 Reverse) \n' + neg_dna_protein_orf_1 + '\n')
-#     file.write('>Protein (DNA ORF2 Reverse) \n' + neg_dna_protein_orf_2 + '\n')
-#     file.write('>Protein (DNA ORF3 Reverse) \n' + neg_dna_protein_orf_3 + '\n')
-#     file.write('\n')
-#     file.write('>Protein (RNA ORF1 Forward)  \n' + rna_protein_orf_1 + '\n')
-#     file.write('>Protein (RNA ORF2 Forward) \n' + rna_protein_orf_2 + '\n')
-#     file.write('>Protein (RNA ORF3 Forward) \n' + rna_protein_orf_3 + '\n')
-#     file.write('\n')
-#     file.write('>Protein (RNA ORF1 Reverse) \n' + neg_rna_protein_orf_1 + '\n')
-#     file.write('>Protein (RNA ORF2 Reverse) \n' + neg_rna_protein_orf_2 + '\n')
-#     file.write('>Protein (RNA ORF3 Reverse) \n' + neg_rna_protein_orf_3 + '\n')
+Saving proteins into FASTA file
+Perform Basic Local Alignment using NCBI-BLAST for specific protein details
+Upload proteins.fasta to https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE=Proteins
+with open('sequence-data\proteins.fasta', 'w') as file:
+    file.write('>Protein (DNA ORF1 Forward)  \n' + dna_protein_orf_1 + '\n')
+    file.write('>Protein (DNA ORF2 Forward) \n' + dna_protein_orf_2 + '\n')
+    file.write('>Protein (DNA ORF3 Forward) \n' + dna_protein_orf_3 + '\n')
+    file.write('\n')
+    file.write('>Protein (DNA ORF1 Reverse) \n' + neg_dna_protein_orf_1 + '\n')
+    file.write('>Protein (DNA ORF2 Reverse) \n' + neg_dna_protein_orf_2 + '\n')
+    file.write('>Protein (DNA ORF3 Reverse) \n' + neg_dna_protein_orf_3 + '\n')
+    file.write('\n')
+    file.write('>Protein (RNA ORF1 Forward)  \n' + rna_protein_orf_1 + '\n')
+    file.write('>Protein (RNA ORF2 Forward) \n' + rna_protein_orf_2 + '\n')
+    file.write('>Protein (RNA ORF3 Forward) \n' + rna_protein_orf_3 + '\n')
+    file.write('\n')
+    file.write('>Protein (RNA ORF1 Reverse) \n' + neg_rna_protein_orf_1 + '\n')
+    file.write('>Protein (RNA ORF2 Reverse) \n' + neg_rna_protein_orf_2 + '\n')
+    file.write('>Protein (RNA ORF3 Reverse) \n' + neg_rna_protein_orf_3 + '\n')
     
-# visualising DNA
-# record = GraphicRecord(sequence=dna, features=[
-#     GraphicFeature(start=5, end=10, strand=+1, color='#ffcccc'),
-#     GraphicFeature(start=8, end=15, strand=+1, color='#ccccff')
-# ])
+visualising DNA
+record = GraphicRecord(sequence=dna, features=[
+    GraphicFeature(start=5, end=10, strand=+1, color='#ffcccc'),
+    GraphicFeature(start=8, end=15, strand=+1, color='#ccccff')
+])
 
-# ax, _ = record.plot(figure_width=20)
-# record.plot_sequence(ax)
-# record.plot_translation(ax, (8, 23), fontdict={'weight': 'bold'})
-# ax.figure.savefig('sequence-data\sequence.png', bbox_inches='tight')
+ax, _ = record.plot(figure_width=20)
+record.plot_sequence(ax)
+record.plot_translation(ax, (8, 23), fontdict={'weight': 'bold'})
+ax.figure.savefig('sequence-data\sequence.png', bbox_inches='tight')
 
 
 # LOGS
@@ -258,14 +258,3 @@ neg_rna_protein_orf_3 = utils.rna_translation(neg_rna_orf_3)
 # print("PROTEIN STRAND FULLFORM (RNA ORF1 Forward) =>")
 # print(utils.translation_fullform(utils.translation_shortform(rna_protein_orf_1)))
 
-# import requests
-
-# url = "https://api.esmatlas.com/foldSequence/v1/pdb/"
-
-# x = requests.post(url,"SRNMATRLYTFRRKSYPGSSSCSQWIYRSRSYSSRNRAGNSIFSFKISRKMASKNNTY")
-# print(x.text)
-
-# with open("result.pdb", "w") as f:
-#     f.write(x.text)
-
-print(list(filter(lambda x: len(x)>50, dna_protein_orf_1.split("_"))))
