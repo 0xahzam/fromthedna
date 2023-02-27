@@ -137,7 +137,7 @@ def plot_rna_reverse_orfs():
 
 # Uncomment to plot
 
-# plot_dna_forward_orfs()
-# plot_dna_reverse_orfs()
-# plot_rna_forward_orfs()
-# plot_rna_reverse_orfs()
+plot_dna_forward_orfs()
+plot_dna_reverse_orfs()
+plot_rna_forward_orfs()
+plot_rna_reverse_orfs()

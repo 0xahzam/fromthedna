@@ -17,5 +17,7 @@ Proteins are being stored in a FASTA file (check [`proteins.fasta`](/sequence-da
 
 Note : only the largest protein strand of each ORF is being plotted while the length of protein strand also being under 400 due to ESM1B API constraint.
 
+[`3dmol.ipynb`](3dmol.ipynb) uses [py3Dmol](https://pypi.org/project/py3Dmol/) to individually visualise better model of all the ORFs (dna + rna, all orders)
+
 ## 📌Examples
 [`hiv.py`](hiv.py) contains an implementation of all the functions over the genome of sequence of HIV-1. The accuracy is quite decent so far, majority of proteins have been verified from the [official site](https://www.ncbi.nlm.nih.gov/nuccore/AF033819)

@@ -204,9 +204,10 @@ neg_rna_protein_orf_2 = utils.rna_translation(neg_rna_orf_2)
 neg_rna_protein_orf_3 = utils.rna_translation(neg_rna_orf_3)
 
 
-Saving proteins into FASTA file
-Perform Basic Local Alignment using NCBI-BLAST for specific protein details
-Upload proteins.fasta to https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE=Proteins
+# Saving proteins into FASTA file
+# Perform Basic Local Alignment using NCBI-BLAST for specific protein details
+# Upload proteins.fasta to https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE=Proteins
+
 with open('sequence-data\proteins.fasta', 'w') as file:
     file.write('>Protein (DNA ORF1 Forward)  \n' + dna_protein_orf_1 + '\n')
     file.write('>Protein (DNA ORF2 Forward) \n' + dna_protein_orf_2 + '\n')
@@ -224,7 +225,7 @@ with open('sequence-data\proteins.fasta', 'w') as file:
     file.write('>Protein (RNA ORF2 Reverse) \n' + neg_rna_protein_orf_2 + '\n')
     file.write('>Protein (RNA ORF3 Reverse) \n' + neg_rna_protein_orf_3 + '\n')
     
-visualising DNA
+# visualising DNA
 record = GraphicRecord(sequence=dna, features=[
     GraphicFeature(start=5, end=10, strand=+1, color='#ffcccc'),
     GraphicFeature(start=8, end=15, strand=+1, color='#ccccff')
